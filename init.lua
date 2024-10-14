@@ -3,8 +3,10 @@ local M = {}
 function M:peek()
     local child = Command("bat")
         :args({
-            "--style", "plain",
-            "--color", "always",
+            "-pp",
+            "--color=always",
+            "--tabs", tostring(PREVIEW.tab_size),
+            "--",
             tostring(self.file.url),
         })
         :stdout(Command.PIPED)
