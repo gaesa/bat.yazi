@@ -30,8 +30,8 @@ Edit `~/.config/yazi/yazi.toml` and add `bat` as the previewer for the file type
 ```toml
 [plugin]
 prepend_previewers = [
-    { name = "*.csv", exec = "bat" },
-    { name = "*.md", exec = "bat" }
+    { name = "*.csv", run = "bat" },
+    { name = "*.md", run = "bat" }
 ]
 ```
 
